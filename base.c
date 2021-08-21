@@ -18,7 +18,6 @@ void base2(int n, int base) {
     tmp = n;
     for ( ; tmp > 0; tmp /= base, digits++ );
 
-
     tmp = n;
     for ( int i = digits; i > 0; i-- ) {
         for ( int j = i - 1; j > 0; j-- ) { // j++

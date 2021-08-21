@@ -26,16 +26,23 @@ void strUpper(char str[]) {
     }
 }
 
+int strEqual(char str1[], char str2[]) {
+    for ( int i = 0; str1[i] == str2[i]; i++ ) {
+        if ( str1[i] == '\0' ) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 int main() {
-    char username[10] = "}Icaiman";
+    printf("%d\n", strEqual("abc", ""));
+    printf("%d\n", strEqual("", "abc"));
+    printf("%d\n", strEqual("abc", "abcd"));
+    printf("%d\n", strEqual("abcd", "abc"));
+    printf("%d\n", strEqual("", ""));
+    printf("%d\n", strEqual("abc", "abc"));
 
-    strUpper(username);
-
-    printf("Hello, %s!\n", username);
-
-    strCopyPoiner(username, "admin");
-
-    printf("Hello, %s!\n", username);
 
     return 0;
 }
